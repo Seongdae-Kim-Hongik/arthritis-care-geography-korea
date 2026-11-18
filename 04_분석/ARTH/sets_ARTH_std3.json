@@ -1,0 +1,135 @@
+{
+ "tag": "ARTH",
+ "outcome_column": "nhis__관절염__진료실인원수",
+ "fixed_on": "2026-10-19 (결과 보기 전 고정; 데이터 값 미열람, 변수 목록·문헌만 사용)",
+ "population_column": "population",
+ "expected_E": "population × 전국 연도별 조율(간접표준화), PLAN §0",
+ "forced": [
+  "eloc__DT_1YL20421E__1인당도시지역면적현황__도시지역인구",
+  "chk__요양기관_의원",
+  "eloc__DT_1YL20701__남녀성비＜br＞(A÷B×100)",
+  "eloc__DT_1YL20891__재정자주도(세입과목개편전)",
+  "ext__pop80_share"
+ ],
+ "forced_transform": {
+  "eloc__DT_1YL20421E__1인당도시지역면적현황__도시지역인구": "ratio_pop",
+  "chk__요양기관_의원": "per100k",
+  "eloc__DT_1YL20701__남녀성비＜br＞(A÷B×100)": "none",
+  "eloc__DT_1YL20891__재정자주도(세입과목개편전)": "none",
+  "eloc__DT_1YL20631__고령인구비율＜br＞(A÷B×100)": "none",
+  "ext__pop80_share": "none"
+ },
+ "negative_controls": [
+  "kchs__DT_H_BELT__SR",
+  "kchs__DT_CPR_AWAR__SR",
+  "eloc__DT_1YL21311__생활계폐기물재활용률＜br＞(A÷B×100)"
+ ],
+ "include_transform": {
+  "chk__정상B_비만관리_수검자대비비율": "none",
+  "kchs__DT_H_EX_WALK__SR": "none",
+  "kchs__DT_H_EX_PHY__SR": "none",
+  "fac__total": "per100k",
+  "fac__생활체육관": "per100k",
+  "fac__수영장": "per100k",
+  "vil__계": "per100k",
+  "eloc__DT_1YL20961__노인천명당노인여가복지시설수＜br＞(A÷B×1000)": "none",
+  "kchs__DT_H_SM__SR": "none",
+  "kchs__DT_117075_H_DR_HIGH_WH__SR": "none",
+  "kchs__DT_H_MENTAL_STRESS__SR": "none",
+  "kchs__DT_HEALTH_RECOG__SR": "none",
+  "eloc__DT_1YL12701__독거노인가구비율＜br＞(A÷B×100)": "none",
+  "eloc__INH_1ES3A02S_03__고용률(%)__계": "none",
+  "eloc__DT_1YL15004__상용직비중＜br＞(A÷B×100)": "none",
+  "eloc__DT_1YL202105E__비율__녹지지역": "none",
+  "eloc__DT_1YL20971__인구천명당의료기관병상수＜br＞(A÷B×1000)": "none",
+  "kchs__DT_NECE_CLINIC__SR": "none"
+ },
+ "sets": {
+  "S1_narrative_full": [
+   "chk__정상B_비만관리_수검자대비비율",
+   "kchs__DT_H_EX_WALK__SR",
+   "kchs__DT_H_EX_PHY__SR",
+   "fac__total",
+   "fac__생활체육관",
+   "fac__수영장",
+   "vil__계",
+   "eloc__DT_1YL20961__노인천명당노인여가복지시설수＜br＞(A÷B×1000)",
+   "kchs__DT_H_SM__SR",
+   "kchs__DT_117075_H_DR_HIGH_WH__SR",
+   "kchs__DT_H_MENTAL_STRESS__SR",
+   "kchs__DT_HEALTH_RECOG__SR",
+   "eloc__DT_1YL12701__독거노인가구비율＜br＞(A÷B×100)",
+   "eloc__INH_1ES3A02S_03__고용률(%)__계",
+   "eloc__DT_1YL15004__상용직비중＜br＞(A÷B×100)",
+   "eloc__DT_1YL202105E__비율__녹지지역",
+   "eloc__DT_1YL20971__인구천명당의료기관병상수＜br＞(A÷B×1000)",
+   "kchs__DT_NECE_CLINIC__SR"
+  ],
+  "S2_core": [
+   "chk__정상B_비만관리_수검자대비비율",
+   "kchs__DT_H_EX_WALK__SR",
+   "fac__total",
+   "vil__계",
+   "kchs__DT_H_SM__SR",
+   "kchs__DT_117075_H_DR_HIGH_WH__SR",
+   "eloc__DT_1YL15004__상용직비중＜br＞(A÷B×100)",
+   "eloc__DT_1YL12701__독거노인가구비율＜br＞(A÷B×100)"
+  ],
+  "S3_physical_activity": [
+   "kchs__DT_H_EX_WALK__SR",
+   "kchs__DT_H_EX_PHY__SR",
+   "fac__total",
+   "fac__생활체육관",
+   "fac__수영장",
+   "vil__계",
+   "eloc__DT_1YL20961__노인천명당노인여가복지시설수＜br＞(A÷B×1000)",
+   "eloc__DT_1YL202105E__비율__녹지지역"
+  ],
+  "S4_socioeconomic": [
+   "eloc__DT_1YL15004__상용직비중＜br＞(A÷B×100)",
+   "eloc__INH_1ES3A02S_03__고용률(%)__계",
+   "eloc__DT_1YL12701__독거노인가구비율＜br＞(A÷B×100)",
+   "kchs__DT_H_MENTAL_STRESS__SR",
+   "kchs__DT_HEALTH_RECOG__SR",
+   "kchs__DT_NECE_CLINIC__SR",
+   "eloc__DT_1YL20971__인구천명당의료기관병상수＜br＞(A÷B×1000)"
+  ],
+  "S5_metabolic_lifestyle": [
+   "chk__정상B_비만관리_수검자대비비율",
+   "kchs__DT_H_EX_PHY__SR",
+   "kchs__DT_117075_H_DR_HIGH_WH__SR",
+   "kchs__DT_H_SM__SR"
+  ],
+  "REF_forced_only": []
+ },
+ "rules": {
+  "likelihood": "forced-only 모형 WAIC 낮은 쪽(Poisson/NB)",
+  "set_choice": "WAIC 최소, 4 이내면 변수 적은 세트",
+  "credible": "95% CrI 1 제외",
+  "vif_drop": 10,
+  "multiverse_specs": 200,
+  "effect_scale": "per 1 SD (IRR)",
+  "main_set_note": "시리즈 규칙(10/6 저자 결정): 주모형=S1_narrative_full(게이트 통과 가설 변수 전부)+forced, VIF>10 변수는 유지·보고, 규칙 선택 간명 세트는 민감도"
+ },
+ "note": "관절염(M00-M19, M22-M25): 골관절염 중심, 통풍(M10)·RA(M05-M06) 포함. 비만·직업 부하·여성·고령이 핵심, 체육시설·걷기는 간접(활동 유지·비만) 경로. 자가보고 비만율은 종속 목록이라 검진 비만관리 비율로 대체",
+ "extra_columns": {
+  "ext__pop80_share": [
+   "ARTH_Estd2.csv",
+   "pop80_share_raw"
+  ]
+ },
+ "offset_E_column": "E_std2",
+ "offset_E_file": "ARTH_Estd2.csv",
+ "offset_E_label": "age-standardised E, fine age bands (E_std2)",
+ "graph": "593-edge contact graph (BRCA 2026-11-04 graph_audit: polygon intersections + six retained island links; 227+2 components), ST_GRAPH=04_분석/ARTH/graph_593.graph",
+ "std3_note": "2026-11-04 PLAN R38(결과 열람 전 사전지정, 15번 런북 3호): v1 sets_ARTH.json 세트·방향·음성대조 그대로. 주분석 E = E_std2(39_build_Estd_fine.py, 10구간 0-9…60-64·65-69·70-74·75+, FBD_DATA_ZIP 주민등록 5세 인구, 청주 2011-13 청원 합산·세종 중복 제거, 총인구 비 1.000). forced: 고령인구비율(65+) 제거(연령표준화와 이중보정), 80세 이상 인구 비율(ext__pop80_share) 추가 — 전국 진료율 최상위가 75+라 75+ 내부 구성은 E로 표준화 불가(정신질환 std3와 같은 논리, 교수 원칙 '표준화 못 한 축은 고정'). 성별×연령 표준화는 전국 298분류 진료표에 성별 축이 없어 불가(KOSIS TX_35001_A061·DT_35001_A0611 메타 확인) → 성비 강제통제 유지, 한계로 명시. 그래프 = 593 edge(유방암 11/4 감사). 민감도: E_std(8구간)·crude E, 80+ 미포함(std2), 577 edge 그래프, 관절증(298코드 201, M15-M19)만 사례 정의는 별도 E가 필요해 후속 민감도로 둔다. 2026-11-04 추가(결과 열람 전): 창원 2023 인구·연령 교정 — 마스터·FBD_DATA_ZIP 2023 창원 블록이 2022값 복사(1,021,487) → KOSIS 1,009,038, 연령 구성은 BRCA 감사의 전국−타 시군구 잔차 재구성본(raw_corrected/2023.csv) 사용.",
+ "fixed_on_std3": "2026-11-04 (결과 열람 전)",
+ "population_override": [
+  {
+   "year": 2023,
+   "fbd_region": "경상남도창원시",
+   "population": 1009038,
+   "source": "KOSIS DT_1YL20651E 2023 통합창원시 계; FBD_DATA_ZIP/2023.csv 창원 블록이 2022값 복사(유방암 11/4 population_final_audit)"
+  }
+ ]
+}
