@@ -50,7 +50,7 @@ def table1():
             ["__H__", "District characteristics, mean (SD)"]]
     for v, lab in TAB1_COV: rows.append([f"  {lab}"] + [f"{T[c]['cov'][v][0]:.1f} ({T[c]['cov'][v][1]:.1f})" for c in cols])
     foot = (f"<sup>a</sup> Direct standardization to the 2015 national population in ten age groups; window values are means of annual rates ({N['asr_2011']:,.0f} in 2011 and {N['asr_2024']:,.0f} in 2024). "
-            "<sup>b</sup> Observed over indirectly age-standardized expected counts summed over the window. P10-P90, 10th-90th percentile; SD, standard deviation; STR, standardized treatment ratio.")
+            "<sup>b</sup> Observed over indirectly age-standardized expected counts summed over the window. District characteristics include values filled within districts for unobserved years (Online Resource 1, Table S1). P10-P90, 10th-90th percentile; SD, standard deviation; STR, standardized treatment ratio.")
     return ("Table 1 People treated for arthritis and district characteristics by calendar window, Korea, 2011-2024", ["Characteristic", "2011-2015", "2016-2019", "2020-2024", "2011-2024"], rows, [6.2, 2.2, 2.2, 2.2, 2.2], foot)
 
 GROUPS = [("Physical activity and recreation", ["walking_practice_rate", "moderate_pa_rate", "public_sports_facilities_per_100k", "community_gyms_per_100k", "public_pools_per_100k", "village_sports_facilities_per_100k", "older_leisure_facilities_per_1000"]),
@@ -76,11 +76,11 @@ def table2():
     foot = (f"Rate ratios (RRs) per 1 standard deviation with 95% credible intervals (CrIs); * 95% CrI excludes 1 (judged before rounding). Principal model: negative binomial with BYM2 district effect and random-walk and independent year effects (n = {N['n_rows']:,} district-years). "
             f"<sup>a</sup> Share of the 200 covariate-subset specifications containing the covariate in which its 95% CrI excluded 1. <sup>b</sup> Credible in at least 75% of specifications with the same sign in at least 95%. "
             f"Type IV adds a Knorr-Held type IV space-time interaction (ΔWAIC {C.dW('KH_typeIV'):,.0f}). NA, not applicable (forced controls were in every specification).")
-    return ("Table 2 District correlates of age-standardized arthritis treatment, principal and space-time interaction models", ["Covariate", "Principal model RR (95% CrI)", "Credible %<sup>a</sup>", "Subset stable<sup>b</sup>", "Type IV model RR (95% CrI)"], rows, [5.1, 3.25, 1.7, 1.7, 3.25], foot)
+    return ("Table 2 District correlates of age-standardized arthritis treatment, principal and type IV space-time interaction models", ["Covariate", "Principal model RR (95% CrI)", "Credible %<sup>a</sup>", "Subset stable<sup>b</sup>", "Type IV model RR (95% CrI)"], rows, [5.1, 3.25, 1.7, 1.7, 3.25], foot)
 
 FIGCAP = {
- 1: "Geography and trend of arthritis treatment in Korea. (a) Residual spatial rate ratio (RR) by district, 2011-2024: posterior mean of the exponentiated BYM2 district effect from the principal model. Solid black outlines, hot spots (posterior probability RR > 1 above 0.95); dashed blue outlines, cold spots (below 0.05); thick gray lines, province boundaries. (b) National crude and directly age-standardized (2015 population) treatment rates.",
- 2: "Persistence of the district pattern. (a) Emerging hot spot analysis of empirical Bayes-smoothed standardized treatment ratios, 2011-2024 (Getis-Ord Gi* with Mann-Kendall trend); numbers of districts in parentheses. (b) Number of calendar windows (2011-2015, 2016-2019, 2020-2024) in which each district was a hot or cold spot in the principal model refitted in each window.",
+ 1: "Geography and trend of arthritis treatment in Korea. a Residual spatial rate ratio (RR) by district, 2011-2024: posterior mean of the exponentiated BYM2 district effect from the principal model. Solid black outlines, hot spots (posterior probability RR > 1 above 0.95); dashed blue outlines, cold spots (below 0.05); thick gray lines, province boundaries. b National crude and directly age-standardized (2015 population) treatment rates.",
+ 2: "Persistence of the district pattern. a Emerging hot spot analysis of empirical Bayes-smoothed standardized treatment ratios, 2011-2024 (Getis-Ord Gi* with Mann-Kendall trend); numbers of districts in parentheses. b Number of calendar windows (2011-2015, 2016-2019, 2020-2024) in which each district was a hot or cold spot in the principal model refitted in each window.",
  3: "Subset-stable district correlates across models. Rate ratios per 1 standard deviation with 95% credible intervals from the principal model, models with Knorr-Held type II and type IV space-time interactions, and the principal model fitted to the number of people treated for infectious diseases as a comparison outcome; log scale.",
 }
 
@@ -102,10 +102,10 @@ DECL = [
  ("Funding", "No funding was received for conducting this study."),
  ("Competing interests", "The author has no relevant financial or non-financial interests to disclose."),
  ("Ethics approval", "The study was approved by the Institutional Review Board of Hongik University (approval no. 7002340-202511-HR-012). Only published aggregate district statistics were analyzed."),
- ("Consent to participate", "Not applicable. Informed consent was waived by the Institutional Review Board because only aggregated, deidentified public statistics were analyzed."),
+ ("Consent to participate", "Informed consent was waived by the Institutional Review Board because only aggregated, deidentified public statistics were analyzed."),
  ("Consent to publish", "Not applicable."),
  ("Clinical trial number", "Not applicable."),
- ("Data availability", "All source data are publicly available aggregate statistics from the National Health Insurance Service, Statistics Korea (KOSIS), the Korea Disease Control and Prevention Agency, and the Ministry of Culture, Sports and Tourism, as cited in the Methods and listed in Online Resource 1 (Table S1)."),
+ ("Data availability", "All source data are publicly available aggregate statistics from the National Health Insurance Service, Statistics Korea (KOSIS), the Ministry of the Interior and Safety, the Korea Disease Control and Prevention Agency, and the Ministry of Culture, Sports and Tourism, as cited in the Methods and listed in Online Resource 1 (Table S1)."),
  ("Code availability", "The analysis code is openly available on GitHub (GITHUB_URL) and archived on Zenodo (ZENODO_URL) under the MIT license."),
  ("Author contributions", "Seongdae Kim conceived and designed the study, curated the data, performed the analysis, interpreted the results, and wrote and revised the manuscript. The author read and approved the final manuscript."),
  ("Use of artificial intelligence", AI_STMT),

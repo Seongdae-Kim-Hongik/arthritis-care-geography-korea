@@ -52,9 +52,9 @@ class JKMS:
                 while i<len(nums):
                     j=i
                     while j+1<len(nums) and nums[j+1]==nums[j]+1: j+=1
-                    parts.append(f"{nums[i]}-{nums[j]}" if j-i>=2 else ", ".join(str(n) for n in nums[i:j+1])); i=j+1
+                    parts.append(f"{nums[i]}–{nums[j]}" if j-i>=2 else ", ".join(str(n) for n in nums[i:j+1])); i=j+1
                 if self.cite=="bracket":
-                    r=p.add_run("["+", ".join(parts)+"]"); r.font.size=Pt(sz); r.font.name=FONT
+                    r=p.add_run(("" if (p.runs and p.runs[-1].text.endswith((" ","("))) else " ")+"["+", ".join(parts)+"]"); r.font.size=Pt(sz); r.font.name=FONT
                     if self.counting: self.body_words+=1
                     continue
                 r=p.add_run(",".join(parts)); r.font.superscript=True; r.font.size=Pt(sz); r.font.name=FONT; continue
